@@ -38,8 +38,23 @@ code { background: var(--cyan-soft); padding: 1px 6px; border-radius: 4px; font-
 .brand:hover { text-decoration: none; }
 .brand-b41 { font: 700 26px "Goldman", sans-serif; color: var(--cyan); }
 .brand-name { font: 400 12px "Goldman", sans-serif; letter-spacing: 1px; color: var(--text); }
-nav { display: flex; gap: 20px; flex-wrap: wrap; }
+nav { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; justify-content: flex-end; }
 nav a { color: var(--text); }
+
+/* support buttons in the platforms' own colours (Patreon coral, Buy Me a Coffee yellow) */
+.pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 7px 14px; border-radius: 999px; font: 600 14px "Inter", sans-serif; white-space: nowrap;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.pill:hover { text-decoration: none; transform: translateY(-1px); }
+.pill svg { width: 15px; height: 15px; fill: currentColor; }
+nav a.pill.patreon, .pill.patreon { background: #FF424D; color: #FFFFFF; }
+.pill.patreon:hover { box-shadow: 0 6px 20px rgba(255, 66, 77, 0.35); }
+nav a.pill.coffee, .pill.coffee { background: #FFDD00; color: #000000; }
+.pill.coffee:hover { box-shadow: 0 6px 20px rgba(255, 221, 0, 0.3); }
+.pill.big { padding: 12px 22px; font-size: 16px; }
+.pill.big svg { width: 18px; height: 18px; }
 
 main { max-width: 1120px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px); }
 
@@ -98,5 +113,7 @@ footer p { margin: 6px 0; }
   .hero { grid-template-columns: 1fr; }
   .hero-art { max-width: 320px; order: -1; }
   .columns { grid-template-columns: 1fr; }
-  nav { gap: 14px; font-size: 14px; }
+  nav { gap: 10px; font-size: 14px; }
+  nav > a:not(.pill) { display: none; }
+  .pill { padding: 6px 11px; font-size: 13px; }
 }
