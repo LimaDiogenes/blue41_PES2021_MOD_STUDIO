@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://limadiogenes.github.io/blue41_PES2021_MOD_STUDIO/sitemap.xml

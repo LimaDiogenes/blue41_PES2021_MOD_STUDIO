@@ -1,0 +1,23 @@
+blue41 PES2021 Mod Studio — Freeware License
+Copyright (c) 2026 blue41. All rights reserved.
+
+1. Free use. You may download and use this software free of charge, for personal and non-commercial modding
+   of games you own.
+
+2. No redistribution. You may not re-upload, mirror, bundle or otherwise distribute the software or any part of it.
+   Share the official page instead: https://limadiogenes.github.io/blue41_PES2021_MOD_STUDIO/
+
+3. No modification. You may not modify, decompile, disassemble, reverse-engineer or create derivative works of the
+   software, except where the law expressly allows it despite this restriction.
+
+4. No selling. You may not sell, rent or charge for the software, or include it in a paid product or service.
+
+5. Third-party components. The software contains open-source components under their own licenses; their notices
+   are in THIRD_PARTY_NOTICES.txt and apply to those components only.
+
+6. No warranty. The software is provided "as is", without warranty of any kind. It changes files of your game,
+   Sider and saves; it keeps backups and an undo log, but you use it at your own risk. In no event shall the author
+   be liable for any claim, damages or other liability arising from its use.
+
+7. Not affiliated with KONAMI. eFootball and PES are trademarks of KONAMI. The software ships no game files; it
+   works with your own installation. Sider is a separate tool by its own author.
