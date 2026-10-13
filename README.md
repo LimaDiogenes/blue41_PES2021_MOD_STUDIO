@@ -21,13 +21,13 @@ every change it makes.
 - **Portable** — no installer, no registry; finds your game, Sider and saves on its own.
 
 ### In development
-BAL Captain module · Become a Legend editor · kit tools · boots & gloves manager · graphics manager
+BAL Captain module · Become a Legend editor · kit tools · boots & gloves manager · balls manager · graphics manager
 
 ## Requirements
 Windows 10/11 (64-bit) · eFootball PES 2021 with [Sider](https://www.mapote.com/sider/) 7.
 
 ## Support
-[Patreon](#) · [Buy Me a Coffee](#)
+[Patreon](https://www.patreon.com/blue41Studio) · [Buy Me a Coffee](https://buymeacoffee.com/blue41studio)
 
 ## License
 Freeware, all rights reserved — see [LICENSE.txt](LICENSE.txt). Not affiliated with or endorsed by KONAMI.
