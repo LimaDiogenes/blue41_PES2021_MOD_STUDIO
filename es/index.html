@@ -33,7 +33,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../style.css?v=02ff96f8">
 </head>
 <body>
   <header class="top">
@@ -269,6 +269,18 @@
     box.addEventListener("mouseenter", () => hold = true); box.addEventListener("mouseleave", () => hold = false);
     box.addEventListener("click", () => show(i + 1));
     if (!matchMedia("(prefers-reduced-motion: reduce)").matches) setInterval(() => { if (!hold && !document.hidden) show(i + 1); }, 5000);
+  })();
+  // feature cards: open one, the cards around it slide to their new places (quick animation, skipped for reduced motion)
+  (() => {
+    const cards = [...document.querySelectorAll(".feature")];
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    cards.forEach(card => card.querySelector("summary").addEventListener("click", () => {
+      const before = new Map(cards.map(c => [c, c.getBoundingClientRect()]));
+      requestAnimationFrame(() => cards.forEach(c => {
+        const a = before.get(c), b = c.getBoundingClientRect(), dx = a.left - b.left, dy = a.top - b.top;
+        if (dx || dy) c.animate([{ transform: `translate(${dx}px, ${dy}px)` }, { transform: "none" }], { duration: 240, easing: "ease-out" });
+      }));
+    }));
   })();
   </script>
 </body>

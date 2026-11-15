@@ -96,15 +96,22 @@ h3 { font-size: 19px; margin: 0 0 8px; }
 }
 .card p { margin: 0; color: var(--muted); }
 .card.soft { background: rgba(17, 18, 36, 0.45); }
-/* feature cards open on click, like the questions (owner 2026-11-15) */
+/* feature cards open on click, like the questions (owner 2026-11-15): the whole card is the button, the arrow sits on
+   the title's line, only the opened card grows (the grid doesn't stretch its row), the others slide (script in the page) */
 .grid:has(> .feature) { align-items: start; }
-.feature summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-.feature summary::-webkit-details-marker { display: none; }
+.card.feature { padding: 0; }
+.feature summary { list-style: none; cursor: pointer; user-select: none; -webkit-user-select: none;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 18px 22px; }
+.feature summary::-webkit-details-marker, .feature summary::marker { display: none; content: ""; }
 .feature summary h3 { margin: 0; }
-.feature summary::after { content: "+"; color: var(--cyan); font-weight: 700; font-size: 22px; line-height: 1; flex: none; }
-.feature[open] summary::after { content: "\2212"; }
-.feature p { margin-top: 12px; }
+.feature summary::after { content: "+"; color: var(--cyan); font-weight: 700; font-size: 22px; line-height: 1; flex: none;
+  transition: transform 0.2s ease; }
+.feature[open] summary::after { transform: rotate(45deg); }
+.feature p { margin: 0; padding: 0 22px 20px; }
+.feature[open] p { animation: feature-in 0.24s ease-out; }
+@keyframes feature-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
 .feature:hover { border-color: rgba(1, 158, 226, 0.45); }
+@media (prefers-reduced-motion: reduce) { .feature[open] p { animation: none; } .feature summary::after { transition: none; } }
 .card ul { margin: 8px 0 0; padding-left: 18px; color: var(--muted); }
 .card li { margin: 6px 0; }
 .card li b { color: var(--text); font-weight: 600; }
