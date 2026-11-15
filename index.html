@@ -33,7 +33,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=02ff96f8">
+  <link rel="stylesheet" href="style.css?v=f01bb732">
 </head>
 <body>
   <header class="top">
@@ -98,55 +98,55 @@
       <h2>What it does today</h2>
       <div class="grid">
         <details class="card feature">
-          <summary><h3>Kit manager &amp; editor</h3></summary>
+          <summary title="Kit manager &amp; editor"><h3>Kit manager &amp; editor</h3></summary>
           <p>Give any team without kits a full set in a minute: the blue41 template (home, away and two goalkeeper kits) or a copy of another team. Draw numbers and name letters in any font, set the kit colours (detect them or pick them from the picture), and place the name and numbers (height, size, curve; name, chest and shorts numbers on or off). Reorder, copy, take out of the game, export / replace any texture.</p>
         </details>
         <details class="card feature">
-          <summary><h3>Boots &amp; gloves manager</h3></summary>
+          <summary title="Boots &amp; gloves manager"><h3>Boots &amp; gloves manager</h3></summary>
           <p>Every boot and glove your game uses, with its menu picture, menu place and how many players wear it. Rename, swap, give to players, drag and drop to reorder, filter by brand, fill in names and pictures from your packs, and fix players on a missing model.</p>
         </details>
         <details class="card feature">
-          <summary><h3>Import packs in one go</h3></summary>
+          <summary title="Import packs in one go"><h3>Import packs in one go</h3></summary>
           <p>Zip, 7z, rar or a folder: see what's new, what would replace yours and what you already have. New models take over the menu place and the players of the ones they replace — also in your Edit-mode data — with a progress bar, and the replaced ones go to the Recycle Bin.</p>
         </details>
         <details class="card feature">
-          <summary><h3>Menu picture generator</h3></summary>
+          <summary title="Menu picture generator"><h3>Menu picture generator</h3></summary>
           <p>A clean menu picture for any boot or glove in seconds: your own logos, 13 free fonts and colours taken from the texture.</p>
         </details>
         <details class="card feature">
-          <summary><h3>Ball manager</h3></summary>
+          <summary title="Ball manager"><h3>Ball manager</h3></summary>
           <p>Drag balls onto competitions: random sets, finals, winter and hi-vis balls, winter weeks. Rename balls everywhere, make menu pictures, export / import textures and import ball packs with a review. Works with BallServer and Football Life 2027's own ball server.</p>
         </details>
         <details class="card feature">
-          <summary><h3>Football Life 2027, next to FL26</h3></summary>
+          <summary title="FL27, next to FL26"><h3>FL27, next to FL26</h3></summary>
           <p>Switch between PES 2021, FL26 and FL27 on Home; each game keeps its own folders. Move from another game brings your FL26 mods over (face packs, commentary, boots packs; kits, balls and stadiums into FL27's own modules), and Move a career continues your Become a Legend career in FL27 (experimental).</p>
         </details>
         <details class="card feature">
-          <summary><h3>Become a Legend editor</h3></summary>
+          <summary title="Become a Legend editor"><h3>Become a Legend editor</h3></summary>
           <p>Shirt numbers of your career's teams with clash checks and your patch's default numbers; a captain and set-piece takers the game keeps (Sider module). My player shows every value of your own player as the career save keeps it.</p>
         </details>
         <details class="card feature">
-          <summary><h3>Full team control</h3></summary>
+          <summary title="Full team control"><h3>Full team control</h3></summary>
           <p>Become a Legend, your way: control the whole team, choose Cursor Change in the pause menu and edit the Game Plan in matches (formation, tactics, substitutions). The spectator prompt at kick-off is removed by itself.</p>
         </details>
         <details class="card feature">
-          <summary><h3>National team numbers</h3></summary>
+          <summary title="National team numbers"><h3>National team numbers</h3></summary>
           <p>Templates per position, star players with their own number and your own number: applied to your save, or in game before every international match.</p>
         </details>
         <details class="card feature">
-          <summary><h3>Transfers &amp; cheats</h3></summary>
+          <summary title="Transfers &amp; cheats"><h3>Transfers &amp; cheats</h3></summary>
           <p>Move a player to another club in your Become a Legend save. No Injuries (also in BAL, where the game has no setting) and Fitness &amp; form lock: keeps your stamina, form and days out where you set them.</p>
         </details>
         <details class="card feature">
-          <summary><h3>Sider, made easy</h3></summary>
+          <summary title="Sider, made easy"><h3>Sider, made easy</h3></summary>
           <p>Every sider.ini setting explained in plain English with the right control for each value; modules and content roots on/off and in order without editing text. The studio's own modules install in one click, and Home tells you when they need an update.</p>
         </details>
         <details class="card feature">
-          <summary><h3>Custom crowd chants</h3></summary>
+          <summary title="Custom crowd chants"><h3>Custom crowd chants</h3></summary>
           <p>Drop MP3 or WAV files on a team: they are converted, matched to the game's own chant loudness and a different song plays each time. Long songs play in full (the module borrows bigger tracks of teams that aren't playing) and get a shortened version for smaller tracks. Trim noise at the start or end on a timeline, or speed a song up a little with the same pitch. Ready-made sets for Liverpool, Corinthians and Brazil — no 2 GB sound bank copies.</p>
         </details>
         <details class="card feature">
-          <summary><h3>Safe &amp; portable</h3></summary>
+          <summary title="Safe &amp; portable"><h3>Safe &amp; portable</h3></summary>
           <p>Every write is backed up, verified and listed in the Change log, where one click undoes it; deleted files go to the Recycle Bin. No installer, no registry: it finds your games, Sider and saves on its own, and tells you what each page needs, with download links.</p>
         </details>
       </div>
@@ -270,17 +270,30 @@
     box.addEventListener("click", () => show(i + 1));
     if (!matchMedia("(prefers-reduced-motion: reduce)").matches) setInterval(() => { if (!hold && !document.hidden) show(i + 1); }, 5000);
   })();
-  // feature cards: open one, the cards around it slide to their new places (quick animation, skipped for reduced motion)
+  // feature cards (owner 2026-11-15): one open at a time; the open card grows down over the rows its text needs and
+  // the cards after it flow around it (down and sideways); every card slides to its new place
   (() => {
     const cards = [...document.querySelectorAll(".feature")];
-    if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    cards.forEach(card => card.querySelector("summary").addEventListener("click", () => {
+    if (!cards.length) return;
+    const grid = cards[0].parentElement, still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const span = c => {
+      if (!c.open) { c.style.gridRowEnd = ""; return; }
+      const cs = getComputedStyle(grid), row = parseFloat(cs.gridAutoRows) || 58, gap = parseFloat(cs.rowGap) || 0;
+      const h = c.querySelector("summary").offsetHeight + c.querySelector("p").offsetHeight;
+      c.style.gridRowEnd = "span " + Math.max(1, Math.ceil((h + gap) / (row + gap)));
+    };
+    cards.forEach(card => card.querySelector("summary").addEventListener("click", e => {
+      e.preventDefault();
       const before = new Map(cards.map(c => [c, c.getBoundingClientRect()]));
-      requestAnimationFrame(() => cards.forEach(c => {
+      const opening = !card.open;
+      cards.forEach(c => { c.open = opening && c === card; span(c); });
+      if (still) return;
+      cards.forEach(c => {
         const a = before.get(c), b = c.getBoundingClientRect(), dx = a.left - b.left, dy = a.top - b.top;
-        if (dx || dy) c.animate([{ transform: `translate(${dx}px, ${dy}px)` }, { transform: "none" }], { duration: 240, easing: "ease-out" });
-      }));
+        if (dx || dy) c.animate([{ transform: `translate(${dx}px, ${dy}px)` }, { transform: "none" }], { duration: 260, easing: "ease-out" });
+      });
     }));
+    addEventListener("resize", () => cards.forEach(span));
   })();
   </script>
 </body>

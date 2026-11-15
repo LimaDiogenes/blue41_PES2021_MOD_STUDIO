@@ -96,21 +96,22 @@ h3 { font-size: 19px; margin: 0 0 8px; }
 }
 .card p { margin: 0; color: var(--muted); }
 .card.soft { background: rgba(17, 18, 36, 0.45); }
-/* feature cards open on click, like the questions (owner 2026-11-15): the whole card is the button, the arrow sits on
-   the title's line, only the opened card grows (the grid doesn't stretch its row), the others slide (script in the page) */
-.grid:has(> .feature) { align-items: start; }
-.card.feature { padding: 0; }
-.feature summary { list-style: none; cursor: pointer; user-select: none; -webkit-user-select: none;
-  display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 18px 22px; }
+/* feature cards (owner 2026-11-15): titles on one line, every closed card one row tall, one card open at a time; the
+   open card spans the rows its text needs (set by the page script) and the cards after it flow around it */
+.grid:has(> .feature) { grid-auto-rows: 58px; gap: 14px; align-items: stretch; }
+.card.feature { padding: 0; overflow: hidden; }
+.feature summary { list-style: none; cursor: pointer; user-select: none; -webkit-user-select: none; height: 58px; box-sizing: border-box;
+  display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 0 18px; }
 .feature summary::-webkit-details-marker, .feature summary::marker { display: none; content: ""; }
-.feature summary h3 { margin: 0; }
+.feature summary h3 { margin: 0; font-size: 15.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
 .feature summary::after { content: "+"; color: var(--cyan); font-weight: 700; font-size: 22px; line-height: 1; flex: none;
   transition: transform 0.2s ease; }
 .feature[open] summary::after { transform: rotate(45deg); }
-.feature p { margin: 0; padding: 0 22px 20px; }
-.feature[open] p { animation: feature-in 0.24s ease-out; }
+.feature p { margin: 0; padding: 0 18px 18px; }
+.feature[open] p { animation: feature-in 0.26s ease-out; }
 @keyframes feature-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
 .feature:hover { border-color: rgba(1, 158, 226, 0.45); }
+.feature[open] { border-color: rgba(1, 158, 226, 0.6); }
 @media (prefers-reduced-motion: reduce) { .feature[open] p { animation: none; } .feature summary::after { transition: none; } }
 .card ul { margin: 8px 0 0; padding-left: 18px; color: var(--muted); }
 .card li { margin: 6px 0; }
