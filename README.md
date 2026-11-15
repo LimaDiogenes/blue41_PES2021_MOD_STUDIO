@@ -1,6 +1,6 @@
 <p align="center"><img src="assets/icon.png" width="96" alt="blue41 PES2021 Mod Studio icon"></p>
 
-# blue41 PES2021 Mod Studio — v0.3.0 Beta
+# blue41 PES2021 Mod Studio — v0.4.0 Beta
 
 > **Beta:** it works, but bugs can still happen and some pages are still placeholders. Every change the app makes is backed up and can be undone (see "Change log" below). Found a bug or have an idea? Write to [blue41management@gmail.com](mailto:blue41management@gmail.com)
 
@@ -33,6 +33,8 @@ Website: <https://limadiogenes.github.io/blue41_PES2021_MOD_STUDIO/>
 - "+ Add team": pick a team, then drop MP3 or WAV files (or a folder) on it, or use "Add songs…".
 - Songs are converted in the background and matched to the game's chant loudness. A different song plays each time.
 - Home / away volume on the Chants page, or in game in the Sider overlay (ChantRotator_blue41): [2]/[3] home, [4]/[5] away.
+- Long songs play in full on bigger tracks borrowed from teams not in the match, and get a shortened version for smaller tracks.
+- "Trim…" on a song: listen from any point on its timeline, cut noise at the start or end, speed it up by up to 6 % (same pitch).
 
 ## Become a Legend
 Close the game (or stay outside Become a Legend, in the main menu) before saving, then load the career.
@@ -75,6 +77,16 @@ Close the game (or stay outside Become a Legend, in the main menu) before saving
   items outside the menu.
 - Your changes live in the studio's own Sider folder (ModStudio-Gear, first in Sider's order) and survive patch
   updates; if your patch's files change, the page offers to rebuild on them. "Undo" (top right) reverts the last change.
+
+## Kits
+- Works with the kit server your patch ships (FL27: common\kits.lua, FL26: kserv.lua).
+- Team kits: every kit of a team, drag to change the order, take kits out of the game or put them back, copy a kit,
+  export / replace each texture as PNG, remove a whole team.
+- Add a team: a team of your game without kits gets the blue41 template set (home, away, two goalkeeper kits) or a copy
+  of another team's kits.
+- Numbers & letters: back, chest and shorts numbers and name letters in any font, colour, outline and width.
+- Colours & settings: kit colours (detect, picker, pick from the picture), collar, shirt model, name and number position
+  and size, name / chest / shorts numbers on or off.
 
 ## Balls
 - The balls your ball server (BallServer, or FL27's own omb) gives each competition: drag and drop, sets, finals /
