@@ -96,6 +96,15 @@ h3 { font-size: 19px; margin: 0 0 8px; }
 }
 .card p { margin: 0; color: var(--muted); }
 .card.soft { background: rgba(17, 18, 36, 0.45); }
+/* feature cards open on click, like the questions (owner 2026-11-15) */
+.grid:has(> .feature) { align-items: start; }
+.feature summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.feature summary::-webkit-details-marker { display: none; }
+.feature summary h3 { margin: 0; }
+.feature summary::after { content: "+"; color: var(--cyan); font-weight: 700; font-size: 22px; line-height: 1; flex: none; }
+.feature[open] summary::after { content: "\2212"; }
+.feature p { margin-top: 12px; }
+.feature:hover { border-color: rgba(1, 158, 226, 0.45); }
 .card ul { margin: 8px 0 0; padding-left: 18px; color: var(--muted); }
 .card li { margin: 6px 0; }
 .card li b { color: var(--text); font-weight: 600; }
