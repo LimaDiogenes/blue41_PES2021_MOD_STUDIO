@@ -1,6 +1,6 @@
 <p align="center"><img src="assets/icon.png" width="96" alt="blue41 PES2021 Mod Studio icon"></p>
 
-# blue41 PES2021 Mod Studio — v0.4.0 Beta
+# blue41 PES2021 Mod Studio — v0.4.1 Beta
 
 > **Beta:** it works, but bugs can still happen and some pages are still placeholders. Every change the app makes is backed up and can be undone (see "Change log" below). Found a bug or have an idea? Write to [blue41management@gmail.com](mailto:blue41management@gmail.com)
 
